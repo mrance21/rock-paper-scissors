@@ -5,6 +5,7 @@ const computerSelection = function getComputerChoice() {
     const random = Math.floor(Math.random() * options.length);
     return(options[random]);
 }
+
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
