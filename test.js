@@ -1,5 +1,10 @@
-// randomly return rock paper or scissors
-// 
+const playerSelection = () => prompt("Rock, paper or scissors?" );
+
+const computerSelection = function getComputerChoice() {
+    const options = ["rock", "paper", "scissors"];
+    const random = Math.floor(Math.random() * options.length);
+    return(options[random]);
+}
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
@@ -40,17 +45,5 @@ function game() {
     }
     return (user > cpu) ? console.log("You won!") : console.log("You lost!")
 }
-
-const playerSelection = () => prompt("Rock, paper or scissors?" );
-
-const computerSelection = function getComputerChoice() {
-    const options = ["rock", "paper", "scissors"];
-    const random = Math.floor(Math.random() * options.length);
-    return(options[random]);
-}
-
-// const computerSelection = getComputerChoice()
-
-// console.log(playRound(playerSelection, computerSelection))
 
 game()
