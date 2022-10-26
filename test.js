@@ -1,6 +1,8 @@
 const playerSelection = () => prompt("Rock, paper or scissors?" );
 
-const computerSelection = function getComputerChoice() {
+const computerSelection = getComputerChoice()
+
+function getComputerChoice() {
     const options = ["rock", "paper", "scissors"];
     const random = Math.floor(Math.random() * options.length);
     return(options[random]);
@@ -30,7 +32,7 @@ function game() {
     let user = 0;
     let cpu = 0;
     for (let i = 0; i < 5; i++) {
-        const rounds = playRound(playerSelection(), computerSelection());
+        const rounds = playRound(playerSelection(), computerSelection);
         console.log(rounds);
         if (rounds === "Tie! Try again.") {
             i -= 1;
@@ -42,9 +44,9 @@ function game() {
             user += 1;
         }
         console.log(`User Score: ${user}, Computer Score: ${cpu}`);
-
     }
     return (user > cpu) ? console.log("You won!") : console.log("You lost!");
 }
 
 game();
+console.log("hey niggga");
